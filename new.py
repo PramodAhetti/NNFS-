@@ -17,8 +17,8 @@ def train(weights):
     return weights
 
 def calculate(input_layer, hidden_layer, output_layer, hidden_bias, output_bias):
-    hidden_activation = np.maximum(0,np.dot(input_layer, hidden_layer) + hidden_bias)
-    output_activation = np.maximum(0,np.dot(hidden_activation, output_layer) + output_bias)
+    hidden_activation = (np.dot(input_layer, hidden_layer) + hidden_bias)**2
+    output_activation = (np.dot(hidden_activation, output_layer) + output_bias)**2
     return output_activation
 
 def cost():

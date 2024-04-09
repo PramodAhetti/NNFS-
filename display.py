@@ -4,13 +4,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # Define the equationdef equation(x, y):
 def equation(x,y):
-    a = 22.7054 * x**2
-    b = -44.6419 * x * y
-    c = 68.0480 * y**2
-    d = -32.0090 * x
-    e = 71.6052
-    output = np.maximum(0, a + b + c + d + e)
-    return output
+   return ((1.1*(x*1.05+y*0.788-1.018)**2 + 1.746*(x*0.27+y*0.24-0.032)**2 - 0.14)**2)
 
 x = np.linspace(-5, 5, 100)
 y = np.linspace(-5, 5, 100)
